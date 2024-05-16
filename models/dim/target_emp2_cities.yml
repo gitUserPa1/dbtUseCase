@@ -1,0 +1,15 @@
+version: 2
+
+models:
+    - name: target_emp2_cities
+      description: "Personal Details of an Employee"
+      columns: 
+          - name: empid
+            tests: 
+              - not_null
+
+          - name: city
+            tests: 
+              - not_null
+
+          

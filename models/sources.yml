@@ -1,0 +1,13 @@
+version: 2
+
+sources:
+  - name: airbnb
+    schema: raw
+    tables:
+      - name: empjsondata
+        identifier: raw_data
+      
+      - name: empjsonexpanded
+        identifier: raw_data2
+
+     

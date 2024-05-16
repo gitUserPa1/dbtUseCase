@@ -1,0 +1,39 @@
+version: 2
+
+models:
+    - name: target_emp2_personal
+      description: "Personal Details of an Employee"
+      columns: 
+          - name: empid
+            tests: 
+              - unique
+              - not_null
+
+          - name: kind
+            tests: 
+              - accepted_values:
+                  values: ['person']
+
+          - name: fullName
+            tests: 
+              - not_null
+
+          - name: age
+            tests: 
+              - not_null
+              - positive_value
+
+          - name: gender
+            tests: 
+              - accepted_values:
+                   values: ['F', 'M', 'Unknown']
+
+          - name: areaCode
+            tests: 
+              - not_null
+
+          - name: phoneNumber
+            tests: 
+              - not_null
+              - exact_ten
+              

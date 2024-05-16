@@ -1,0 +1,24 @@
+version: 2
+
+models:
+    - name: target_emp2_children
+      description: "Personal Details of an Employee"
+      columns: 
+          - name: empid
+            tests: 
+              - not_null
+
+          - name: name
+            tests: 
+              - not_null
+
+          - name: gender
+            tests: 
+              - accepted_values:
+                   values: ['F', 'M', 'Unknown']
+
+          - name: age
+            tests: 
+              - not_null
+              - positive_value
+
